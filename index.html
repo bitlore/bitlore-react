@@ -3,16 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>bit lore | interactive agency | web development & design </title>
+		<title>bit lore | digital interactive studio | web development & design </title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 		<link rel=icon href=./favicon.png>
 	</head>
 	<body>
 		<nav>
-			<div>bit lore</div>
-			<div id="home-link" class="section-link on">home</div>
-			<div id="work-link" class="section-link">work</div>
+			<div id="home-link" class="section-link on">bit lore</div>
+			<!-- <div id="work-link" class="section-link">work</div> -->
 			<div id="about-link" class="section-link">about</div>
 			<div id="contact-link" class="section-link">contact</div>
 		</nav>
@@ -30,44 +29,87 @@
 		<main id="work" class="hidden">
 			<div class="container">
 				<section>
-					<!-- <img src="./bl_back.png" alt="work project 1"> -->
-					<p></p>
+					<div class="img" style="background-image:url(./bl_back.png)">
+						
+					</div>
+					<div class="text">
+						<h2>Title</h2>
+						<p>Exotic alien swords are easy to come by, Aces are rare. Yes, that's right, you're going. You've been gone for ages. You're already gone. You're still here. You've just arrived. I haven't even met you yet. It all depends on who you are and how you look at it. Strange business, time. You can always judge a man by the quality of his enemies. Every great decision creates ripples. Like a huge boulder dropping in a lake. The ripples merge and rebound off the banks in unforseeable ways. The heavier the decision, the larger the waves, the more uncertain the consequences.</p>
+					</div>
 				</section>
-				<div class="arrow"></div>
+				<div class="r-arrow">
+					<div></div>
+				</div>
 			</div>
 		</main>
 		
 		<!-- about -->
 		<main id="about" class="hidden">
 			<div class="container">
-				<section style="margin-right:4em;">
-					<div>							
-						<h4>Gourd Lord</h4>
-						<p>
-							There's something that doesn't make sense. Let's go and poke it with a stick. Look at me, no plans, no backup, no weapons worth a damn. Oh, and something else I don't have: anything to lose. So, if you're sitting up there with your silly little spaceships and your silly little guns; just remember who's standing in your way. Remember every black day I ever stopped you and then, and then, do the smart thing. Let somebody else try first.
-						</p>
-					</div>
-					<img src="./ethan-jellyfish.png" alt="ethan" style="margin-right:20%;">
-				</section>
-				<section>
-					<img src="./tay-jellyfish.png" alt="taylor" style="margin-left:15%;">
+				<!-- <div>
+					<h3>Our mission</h3>
+					<p>An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. I'm getting old. Do you wanna come with me? 'Cause if you do, then I should warn you — you're gonna see all sorts of things. Ghosts from the past. Aliens from the future. The day the Earth died in a ball of flame. It won't be quiet, it won't be safe, and it won't be calm. But I'll tell you what it will be: The trip of a lifetime! You look beautiful! ...considering. That you're human.</p>
+					<p><i>I think you need a doctor.</i></p>
+				</div> -->
+				<!-- <div>
+					<h3>Our team</h3>
+				</div> -->
+				<div class="flex collapse">					
+					<section style="margin-right:4em;dis">
+						<div>							
+							<h4>Gourd Lord</h4>
+							<p>
+								There's something that doesn't make sense. Let's go and poke it with a stick. Look at me, no plans, no backup, no weapons worth a damn. Oh, and something else I don't have: anything to lose. So, if you're sitting up there with your silly little spaceships and your silly little guns; just remember who's standing in your way. Remember every black day I ever stopped you and then, and then, do the smart thing. Let somebody else try first.
+							</p>
+						</div>
+						<img src="./ethan-jellyfish.png" alt="ethan" style="margin-right:20%;">
+					</section>
+					<section>
+						<img src="./tay-jellyfish.png" alt="taylor" style="margin-left:15%;">
+						<div>
+							<h4 style="margin-top:2em;">
+								High Priestess of the Ministry of Sinistry
+							</h4>
+							<p style="margin-bottom:0;">							
+								Sweet, maybe...Passionate, I suppose...But don't ever mistake that for nice. Blimey, trying to make an Ood laugh...Black tie...whenever I wear this, something bad always happens. I'm sorry. I'm so sorry. Harmless is just the word: that's why I like it! Doesn't kill, doesn't wound, doesn't maim. But I'll tell you what it does do: it is very good at opening doors!
+							</p>
+						</div>
+					</section>
+				</div>
+				<!-- <div class="flex partner">
+					<img src="./dann-linda.jpg" alt="dann and lindsey wunderfurn of wunderfurn photography">
 					<div>
-						<h4 style="margin-top:2em;">
-							High Priestess of the Ministry of Sinistry
-						</h4>
-						<p style="margin-bottom:0;">							
-							Sweet, maybe...Passionate, I suppose...But don't ever mistake that for nice. Blimey, trying to make an Ood laugh...Black tie...whenever I wear this, something bad always happens. I'm sorry. I'm so sorry. Harmless is just the word: that's why I like it! Doesn't kill, doesn't wound, doesn't maim. But I'll tell you what it does do: it is very good at opening doors!
-						</p>
+						<h4>Surface SEO</h4>
+						<p></p>
 					</div>
-				</section>
+				</div>
+				<div class="flex partner">
+					<img src="./carlo.jpeg" alt="carlo barajas of surface seo">
+					<div>
+						<h4>Surface SEO</h4>
+						<p></p>
+					</div>
+				</div> -->
 			</div>
 		</main>
 		
 		<!-- contact -->
 		<main id="contact" class="hidden">
 			<div class="container" style="max-width:18em;text-align:center;">
-				<h2>hello@bitlore.io</h2>
-				<h2>xxx-xxx-xxxx</h2>
+				<h2>
+					<a href="mailto:hello@bitlore.io" id="company-email">hello@bitlore.io</a>
+				</h2>
+				<!-- <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+					Name:<br>
+					<input type="text" name="name"><br>
+					E-mail:<br>
+					<input type="text" name="mail"><br>
+					Comment:<br>
+					<input type="text" name="comment" size="50"><br><br>
+					<input type="submit" value="Send">
+					<input type="reset" value="Reset">
+				</form> -->
+				<!-- <h2>xxx-xxx-xxxx</h2> -->
 			</div>
 		</main>
 		

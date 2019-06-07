@@ -1,18 +1,24 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	// let views = ['home','work','about','contact'];
-	let views = ['home','work','about','contact'];
+	let views = ['home','about','contact'];
 	let currentView = 'home';
 	
 	let projects = [];
 	let currentProject = '';
+	let navigating = false;
 		
 	document.addEventListener('click', function (event) {
 		if (!event.target.matches('.section-link')) return;
 		event.preventDefault();
-		goToView(event.target.textContent);
+		goToView(event.target.id.split('-')[0]);
 	}, false);
 	
 	function goToView(id) {
+		console.log(id);
+		if (navigating) {
+			return;
+		}
+		navigating = true;
 		for (let i = 0; i < views.length; i++) {
 			let link = document.getElementById(views[i] + '-link');
 			if (link.id.startsWith(id)) {
@@ -33,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			viewing.classList.add('hidden');
 			nextView.classList.remove('hidden');
 			nextView.classList.add('shown');
+			navigating = false;
 		}, 500);
 		currentView = id;
 	}
