@@ -4,7 +4,7 @@ body {
 	min-height: 100%;
 	padding: 0;
 	margin: 0;
-	color: white;
+	color: whitesmoke;
 	font-family: 'Cutive Mono', monospace;
 	line-height: 1.5em;
 	background-image: url("bl_back.png");
@@ -29,14 +29,13 @@ h1 {
 }
 h2 {
 	margin: 0 auto;
-	font-size: 1.41em;
+	font-size: 1.68em;
 	line-height: 1.6em;
-	text-align: center;
 }
 h3 {
 	font-size: 1.41em;
 	line-height: 1.6em;
-	border-bottom: 1px solid gray;
+	/* border-bottom: 1px solid gray; */
 }
 h4 {
 	font-size: 1.19em;
@@ -48,6 +47,10 @@ p {
 	margin: 2em 0;
 }
 
+a {
+	color: whitesmoke;
+}
+
 div.container {
 	width: 100%;
 	max-width: 80em;
@@ -55,8 +58,16 @@ div.container {
 	box-sizing: border-box;
 }
 
-div.flex {
+.flex {
 	display: flex;
+}
+
+.flex.column {
+	flex-direction: column;
+}
+
+.framed {
+	border: 1em solid whitesmoke;
 }
 
 nav {
@@ -96,7 +107,7 @@ nav > div.section-link:hover::before {
 
 nav > div.section-link.on::before {
 	width: 80%;
-	border-bottom-color: white;
+	border-bottom-color: whitesmoke;
 }
 
 main {
@@ -148,49 +159,88 @@ main#about div.partner div {
 	flex: 0 0 80%;
 } */
 
+main#contact a#company-email {
+	color:whitesmoke;
+	text-decoration:none;
+}
+
 main#work {
+	position: relative;
 	padding: 4em 4em 2em 2em;
 }
 
+/* section.current {
+	animation: slidein 1s;
+}
+section.prev {
+	animation: slideout 1s;
+} */
+
 main#work section {
-	display: flex;
-	height: 100%;
-	margin-right: 3em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 4em;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: transform 1s;
 }
 
-main#work section > div.img {
-	height: 100%;
-	max-width: 50%;
+main#work section.prev {
+	opacity: 1;
+	transform: translateX(-100%);
+}
+
+main#work section.current {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+
+main#work section > .left {
+	/* height: calc(100vh - 16em); */
+	/* min-height: 10em; */
+	max-height: 100%;
+	/* height: 80%; */
+	flex: 0 1 50%;
+	/* background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+}
+
+main#work section > div.right {
+	justify-content: space-around;
+	text-align: left;
 	flex: 1 1 50%;
-	border: 3px solid gainsboro;
-	background: center contain no-repeat;
+	padding-left: 4em;
 }
 
-main#work section > div.text {
-	padding: 0 0 0 2em;
-	flex: 1 0 20em;
-	background-color: gray;
+main#work section > div.right img {
+	display: block;
+	margin: 2em auto;
+	max-width: 60%;
 }
 
+main#work section ul {
+	list-style: none;
+	padding-left: 0;
+}
 
 main#work div.r-arrow {
-	position: absolute;
+	position: fixed;
 	top: 50%;
-}
-
-main#contact a#company-email {
-	color:white;
-	text-decoration:none;
 }
 
 div.r-arrow {
 	position: relative;
 	transition: border-color .5s ease;
-	right: 4em;
+	right: 2em;
 	width: 0;
 	height: 0;
 	border: 1em solid transparent;
-	border-color: white white white transparent;
+	border-color: whitesmoke whitesmoke whitesmoke transparent;
 	cursor: pointer;
 }
 
@@ -201,7 +251,7 @@ div.r-arrow > div:first-child {
 	width: 0;
 	height: 0;
 	border: 1em solid transparent;
-	border-color: transparent transparent transparent white;
+	border-color: transparent transparent transparent whitesmoke;
 	cursor: pointer;
 	transition: border-color .5s ease;
 	overflow: visible;
@@ -217,6 +267,9 @@ div.r-arrow:hover > div:first-child {
 	.flex.collapse {
 		flex-direction: column;
 	}
+	.flex.collapse.reverse {
+		flex-direction: column-reverse;
+	}
 }
 
 
@@ -230,4 +283,16 @@ div.r-arrow:hover > div:first-child {
   0%   {opacity: 1;}
   50%  {opacity: 0;}
   100% {opacity: 0;}
+}
+
+@keyframes slidein {
+  0%   {transform: translateX(-100%);}
+  /* 50%  {opacity: 0;} */
+  100% {transform: translateX(0);}
+}
+
+@keyframes slideout {
+  0%   {transform: translateX(0);}
+  /* 50%  {opacity: 0;} */
+  100% {transform: translateX(100%);}
 }

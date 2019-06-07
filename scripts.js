@@ -1,20 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	// let views = ['home','work','about','contact'];
-	let views = ['home','about','contact'];
+	let views = ['home','about','work','contact'];
 	let currentView = 'home';
-	
-	let projects = [];
-	let currentProject = '';
 	let navigating = false;
+	
+	let projects = ['omi','stub','stub-2'];
+	let currentProject = 'omi';
 		
 	document.addEventListener('click', function (event) {
-		if (!event.target.matches('.section-link')) return;
-		event.preventDefault();
-		goToView(event.target.id.split('-')[0]);
+		if ( event.target.matches('.section-link') ) {			
+			event.preventDefault();
+			goToView(event.target.id.split('-')[0]);
+			return;
+		}
+		if ( event.target.matches('.r-arrow') ) {
+			event.preventDefault();
+			nextProject();
+			return;
+		}
 	}, false);
 	
 	function goToView(id) {
-		console.log(id);
 		if (navigating) {
 			return;
 		}
@@ -44,5 +50,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		currentView = id;
 	}
 	
+	function nextProject() {
+		let currentIndex = projects.indexOf(currentProject);
+		
+		for (let i = 0, n = projects.length; i < n; i++) {
+			let el = document.getElementById(projects[i]);
+			if (i === currentIndex) {
+				el.classList.remove('current');
+				el.classList.add('prev');
+			}
+			else if (
+				i === currentIndex + 1 ||
+				( currentIndex === projects.length - 1 && i === 0)
+			) {
+				el.classList.add('current');
+				currentProject = projects[i];
+			}
+			else {
+				el.classList.remove('prev');
+			}
+		}
+	}
+
 	
 });
