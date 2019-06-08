@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	let currentView = 'home';
 	let navigating = false;
 	
-	let projects = ['omi','stub','stub-2'];
+	let projects = ['omi','evans','bm','galileo'];
 	let currentProject = 'omi';
 		
 	document.addEventListener('click', function (event) {
@@ -51,8 +51,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}
 	
 	function nextProject() {
+		if (navigating) {
+			return;
+		}
 		let currentIndex = projects.indexOf(currentProject);
-		
+		navigating = true;
 		for (let i = 0, n = projects.length; i < n; i++) {
 			let el = document.getElementById(projects[i]);
 			if (i === currentIndex) {
@@ -70,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				el.classList.remove('prev');
 			}
 		}
+		setTimeout( () => { navigating = false; }, 500);
 	}
 
 	

@@ -1,4 +1,5 @@
 body {
+	font-size: 13pt;
 	position: relative;
 	width: 100%;
 	min-height: 100%;
@@ -44,11 +45,27 @@ h4 {
 h5 { font-weight: bold; }
 
 p {
-	margin: 2em 0;
+	margin: 1.5em 0;
 }
 
 a {
+	position: relative;
 	color: whitesmoke;
+}
+
+a.fancy {
+	text-decoration: none;
+}
+a.fancy::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1.5em;
+	border-bottom: 1px solid whitesmoke;
+	transition: width .3s ease, border-color .3s;
+}
+a.fancy:hover::before {
+	width: 100%;
 }
 
 div.container {
@@ -68,6 +85,10 @@ div.container {
 
 .framed {
 	border: 1em solid whitesmoke;
+}
+
+.framed.dark {
+	border: 1em solid black;
 }
 
 nav {
@@ -167,7 +188,9 @@ main#contact a#company-email {
 main#work {
 	position: relative;
 	padding: 4em 4em 2em 2em;
+	overflow-x: hidden;
 }
+/* main#work::-webkit-scrollbar { width: 0 !important } */
 
 /* section.current {
 	animation: slidein 1s;
@@ -179,18 +202,18 @@ section.prev {
 main#work section {
 	position: absolute;
 	top: 0;
-	right: 0;
-	bottom: 0;
+	right: 2em;
 	left: 0;
-	padding: 4em;
+	bottom: 4em;
+	padding: 2em 4em;
 	opacity: 0;
-	transform: translateX(100%);
+	transform: translateX(200%);
 	transition: transform 1s;
 }
 
 main#work section.prev {
 	opacity: 1;
-	transform: translateX(-100%);
+	transform: translateX(-200%);
 }
 
 main#work section.current {
@@ -200,27 +223,24 @@ main#work section.current {
 
 
 main#work section > .left {
-	/* height: calc(100vh - 16em); */
-	/* min-height: 10em; */
-	max-height: 100%;
-	/* height: 80%; */
-	flex: 0 1 50%;
-	/* background-position: center;
+	flex: 1 1 50%;
+	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover; */
+	background-size: cover;
 }
 
 main#work section > div.right {
 	justify-content: space-around;
 	text-align: left;
 	flex: 1 1 50%;
+	min-width: 20em;
 	padding-left: 4em;
 }
 
 main#work section > div.right img {
 	display: block;
 	margin: 2em auto;
-	max-width: 60%;
+	width: 60%;
 }
 
 main#work section ul {
@@ -231,6 +251,19 @@ main#work section ul {
 main#work div.r-arrow {
 	position: fixed;
 	top: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+	main#work {
+		bottom: auto;
+	}
+	main#work section > div.right {
+		padding-left: 0;
+		margin-bottom: 4em;
+	}
+	main#work section > .left {
+		min-height: 20em;
+	}
 }
 
 div.r-arrow {
@@ -263,7 +296,7 @@ div.r-arrow:hover > div:first-child {
 	border-color: transparent transparent transparent #444;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	.flex.collapse {
 		flex-direction: column;
 	}
