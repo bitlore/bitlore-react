@@ -8,7 +8,7 @@ body {
 	color: whitesmoke;
 	font-family: 'Cutive Mono', monospace;
 	line-height: 1.5em;
-	background-image: url("bl_back.png");
+	background-image: url('./img/bl_back.png');
 	background-position: center 1em;
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
@@ -217,7 +217,7 @@ main#work section > div.right {
 
 main#work section > div.right img {
 	display: block;
-	margin: 2em auto;
+	margin: 4em auto;
 	width: 60%;
 	max-width: 350px;
 }
@@ -233,6 +233,7 @@ main#work section ul {
 	}
 	main#work section {
 		padding: 2em 3em 2em 1em;
+		max-width: 40em;
 	}
 	main#work section > div.right {
 		display: block;
@@ -240,8 +241,6 @@ main#work section ul {
 	}
 	main#work section > div.left {
 		display: none;
-		/* min-height: 20em;
-		margin-top: 4em; */
 	}
 }
 
