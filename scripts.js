@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			goToView(event.target.id.split('-')[0]);
 			return;
 		}
-		if ( event.target.matches('.r-arrow') ) {
+		if ( event.target.matches('.go-right') ) {
 			event.preventDefault();
 			nextProject();
 			return;

@@ -132,17 +132,15 @@ nav > div.section-link.on::before {
 }
 
 main {
+	position: relative;
 	justify-content: space-around;
-	position: absolute;
-	top: 2em;
-	left: 0;
-	right: 0;
 	min-height: calc(100vh - 2em);
-	padding: 2em 2em 2em 2em;
+	padding: 4em;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow-x: hidden;
 }
 
 main.show {
@@ -172,43 +170,23 @@ main#about section img {
 	width: 80%;
 }
 
-/* main#about div.partner img {
-	flex: 0 0 20%;
-}
-
-main#about div.partner div {
-	flex: 0 0 80%;
-} */
-
 main#contact a#company-email {
 	color:whitesmoke;
 	text-decoration:none;
 }
 
-main#work {
-	position: relative;
-	padding: 4em 4em 2em 2em;
-	overflow-x: hidden;
-}
-/* main#work::-webkit-scrollbar { width: 0 !important } */
-
-/* section.current {
-	animation: slidein 1s;
-}
-section.prev {
-	animation: slideout 1s;
-} */
-
 main#work section {
 	position: absolute;
 	top: 0;
-	right: 2em;
+	right: 0;
 	left: 0;
-	bottom: 4em;
-	padding: 2em 4em;
-	opacity: 0;
+	bottom: 0;
+	max-width: 70em;
+	margin: 0 auto;
+	padding: 6em;
 	transform: translateX(200%);
 	transition: transform 1s;
+	opacity: 0;
 }
 
 main#work section.prev {
@@ -222,7 +200,7 @@ main#work section.current {
 }
 
 
-main#work section > .left {
+main#work section > div.left {
 	flex: 1 1 50%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -241,6 +219,7 @@ main#work section > div.right img {
 	display: block;
 	margin: 2em auto;
 	width: 60%;
+	max-width: 350px;
 }
 
 main#work section ul {
@@ -248,23 +227,29 @@ main#work section ul {
 	padding-left: 0;
 }
 
+@media only screen and (max-width: 1000px) {
+	main#work {
+		bottom: auto;
+	}
+	main#work section {
+		padding: 2em 3em 2em 1em;
+	}
+	main#work section > div.right {
+		display: block;
+		padding-left: 0;
+	}
+	main#work section > div.left {
+		display: none;
+		/* min-height: 20em;
+		margin-top: 4em; */
+	}
+}
+
 main#work div.r-arrow {
 	position: fixed;
 	top: 50%;
 }
 
-@media only screen and (max-width: 1000px) {
-	main#work {
-		bottom: auto;
-	}
-	main#work section > div.right {
-		padding-left: 0;
-		margin-bottom: 4em;
-	}
-	main#work section > .left {
-		min-height: 20em;
-	}
-}
 
 div.r-arrow {
 	position: relative;
