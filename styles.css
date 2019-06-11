@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 h1 {
 	margin: 1em auto;
 	font-weight: normal;
-	font-size: 2em;
+	font-size: 1.68em;
 	line-height: 1.5em;
 	max-width: 22em;
 	text-align: center;
@@ -281,10 +281,6 @@ div.r-arrow:hover > div:first-child {
 		margin: 0 !important;
 	}
 	
-	nav {
-		padding: 0 1em;
-	}
-	
 	main {
 		padding: 4em 1em;
 	}
@@ -292,7 +288,6 @@ div.r-arrow:hover > div:first-child {
 	main#about section {
 		margin: 0;
 	}
-	
 	main#about section img {
 		margin: 2em 0 !important;
 		width: 100% !important;
@@ -319,9 +314,19 @@ div.r-arrow:hover > div:first-child {
 	}
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
 	body {
 		font-size: 12pt;
+	}
+	nav {
+		padding: 0 1em;
+		text-align: center;
+	}
+	nav > div:first-child {
+		text-align: left;
+	}
+	nav > div:last-child {
+		text-align: right;
 	}
 }
 
