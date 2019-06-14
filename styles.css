@@ -8,12 +8,6 @@ body {
 	color: whitesmoke;
 	font-family: 'Cutive Mono', monospace;
 	line-height: 1.5em;
-	background-image: url('./img/bl_back.png');
-	background-position: center 1em;
-	background-repeat: no-repeat;
-	background-size: auto 100vh;
-	background-color: #202020;
-	z-index: 0;
 }
 
 body * {
@@ -312,6 +306,18 @@ div.r-arrow:hover > div:first-child {
 		bottom: 1.5em;
 		right: 2.5em;
 	}
+}
+
+div#background {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-image: url('./img/bl_back.png');
+	background-position: center 1em;
+	background-repeat: no-repeat;
+	background-size: auto 100vh;
+	background-color: #202020;
+	z-index: 0;
 }
 
 @media only screen and (max-width:600px) {
