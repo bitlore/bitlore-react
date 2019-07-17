@@ -8,6 +8,7 @@ body {
 	color: whitesmoke;
 	font-family: 'Cutive Mono', monospace;
 	line-height: 1.5em;
+	background-color: #202020;
 }
 
 body * {
@@ -20,7 +21,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 
 h1 {
-	margin: 1em auto;
+	margin: 0 auto;
 	font-weight: normal;
 	font-size: 1.68em;
 	line-height: 1.5em;
@@ -166,6 +167,11 @@ main.hide {
 main.hidden {
 	z-index: -1;
 	display: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
 main#about section {
