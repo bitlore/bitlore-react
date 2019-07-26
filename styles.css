@@ -179,6 +179,39 @@ main#about section {
 	justify-content: space-between;
 	margin-bottom: 2em;
 }
+main#about section:first-of-type {
+	margin-right: 3em;
+}
+main#about section > div.img {
+	margin-right: 2em;
+	height: 23em;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+main#about #profile-1 {
+	background-image: url('./img/ethan-coast.png');
+}
+main#about #profile-2 {
+	background-image: url('./img/tay-melon.png');
+}
+
+@media only screen and (max-width:1000px) {
+	main#about section {
+		margin-right: 0 !important;
+	}
+	main#about section > div.img {
+		margin: 2em 0;
+		width: 100%;
+	}
+	
+	main#about #profile-1 {
+		background-image: url('./img/tay-melon.png');
+	}
+	main#about #profile-2 {
+		background-image: url('./img/ethan-coast.png');
+	}
+}
 
 main#contact a#company-email {
 	color:whitesmoke;
@@ -283,14 +316,6 @@ div.r-arrow:hover > div:first-child {
 	
 	main {
 		padding: 4em 1em;
-	}
-	
-	main#about section {
-		margin: 0;
-	}
-	main#about section img {
-		margin: 2em 0 !important;
-		width: 100% !important;
 	}
 	
 	main#work {
