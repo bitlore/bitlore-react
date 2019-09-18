@@ -184,10 +184,16 @@ main#about section:first-of-type {
 }
 main#about section > div.img {
 	margin-right: 2em;
-	height: 23em;
+	height: 22em;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+main#about p:last-child {
+	margin-bottom: 0;
+}
+main#about section > *:first-child {
+	margin-bottom: 3em;
 }
 main#about #profile-1 {
 	background-image: url('./img/ethan-coast.png');
@@ -197,7 +203,7 @@ main#about #profile-2 {
 }
 
 @media only screen and (max-width:1000px) {
-	main#about section {
+	main#about section, main#about section > * {
 		margin-right: 0 !important;
 	}
 	main#about section > div.img {
