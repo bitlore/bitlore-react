@@ -1,5 +1,15 @@
-function Home() {
-  return <div>Welcome to Next.js!</div>
-}
+import Layout from '../components/layout';
 
-export default Home
+const Index = () => (
+	<Layout>
+		<p>
+			Welcome to Bit Lore!
+		</p>
+	</Layout>
+);
+
+// function Index() {
+//   return Index;
+// }
+
+export default Index;
