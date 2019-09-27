@@ -2,9 +2,11 @@ import Layout from '../components/layout';
 
 const Index = () => (
 	<Layout>
-		<p>
-			Welcome to Bit Lore!
-		</p>
+		<main id="home">
+			<h1>
+				We are a digital studio specializing in web development and design.
+			</h1>
+		</main>
 	</Layout>
 );
 

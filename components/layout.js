@@ -14,6 +14,7 @@ const Layout = props => (
 				width: 100%;
 				max-width: 80em;
 				margin: 0 auto;
+				padding: 0 4em;
 				box-sizing: border-box;
 			}
 		`}</style>
@@ -104,12 +105,49 @@ const Layout = props => (
 				position: relative;
 				justify-content: space-around;
 				min-height: calc(100vh - 2em);
-				padding: 4em;
+				padding: 4em 0;
 				box-sizing: border-box;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				overflow-x: hidden;
+			}
+			
+			.flex {
+				display: flex;
+			}
+			.flex.column {
+				flex-direction: column;
+			}
+			.framed {
+				border: 1em solid whitesmoke;
+			}
+			.framed.dark {
+				border: 1em solid black;
+			}
+			.no-top-margin {
+				margin-top: 0;
+			}
+			.no-bottom-margin {
+				margin-bottom: 0;
+			}
+			
+			@media only screen and (max-width: 1000px) {
+				
+				.flex.collapse {
+					flex-direction: column;
+				}
+				.flex.collapse.reverse {
+					flex-direction: column-reverse;
+				}
+				
+				.responsive-margin {
+					margin: 0 !important;
+				}
+				
+				main {
+					padding: 0 1em;
+				}
 			}
 		`}</style>
   </div>
