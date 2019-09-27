@@ -8,8 +8,4 @@ const Index = () => (
 	</Layout>
 );
 
-// function Index() {
-//   return Index;
-// }
-
 export default Index;
