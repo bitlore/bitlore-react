@@ -15,18 +15,16 @@ export default function About() {
             <p>
               When not designing, writing, and coding, we can be found exploring the moss-laden forests surrounding Portland and sharing a few gourds of yerba mate.
             </p>
-            <p>
-              <ul>
-                <li>Our services include:</li>
-                <li>web development</li>
-                <li>user interface design</li>
-                <li>user experience</li>
-                <li>branding</li>
-                <li>e-commerce integration</li>
-                <li>email marketing</li>
-                <li>and web animation</li>
-              </ul>
-            </p>
+            <ul>
+              <li>Our services include:</li>
+              <li>web development</li>
+              <li>user interface design</li>
+              <li>user experience</li>
+              <li>branding</li>
+              <li>e-commerce integration</li>
+              <li>email marketing</li>
+              <li>and web animation</li>
+            </ul>
             <p>
               Our expert friends at <a href="https://surfaceseo.net/" target="_blank">Surface SEO</a> and <a href="https://www.wunderfurn.com/" target="_blank">Wunderfurn Photography</a> help us increase visibility and provide beautiful imagery.
             </p>
@@ -40,7 +38,7 @@ export default function About() {
         <div className="flex collapse">
           <section className="flex column collapse">
             <div>
-              <h3>Taylor Law</h3>
+              <h3>Taylor Pokoj Law</h3>
               <h4>high priestess of the ministry of sinistry</h4>
               <h4>co-founder // ux // developer</h4>
               <p className="no-bottom-margin">
@@ -71,7 +69,6 @@ export default function About() {
         </div>
       </main>
       <style jsx>{`
-        
         section {
           flex: 1 1 50%;
           justify-content: space-between;

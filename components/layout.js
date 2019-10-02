@@ -11,6 +11,7 @@ const Layout = props => (
 		</div>
 		<style jsx>{`
 			div.container {
+				position: relative;
 				width: 100%;
 				max-width: 80em;
 				margin: 0 auto;
@@ -66,16 +67,13 @@ const Layout = props => (
 				margin: 0;
 			}
 			h5 { font-weight: bold; }
-
 			p {
 				margin: 1.5em 0;
 			}
-
 			ul {
 				list-style: none;
 				padding-left: 0;
 			}
-
 			img {
 				box-sizing: border-box;
 				object-fit: cover;
@@ -85,7 +83,6 @@ const Layout = props => (
 				position: relative;
 				color: whitesmoke;
 			}
-
 			a.fancy {
 				text-decoration: none;
 			}
@@ -133,20 +130,23 @@ const Layout = props => (
 			}
 			
 			@media only screen and (max-width: 1000px) {
-				
 				.flex.collapse {
 					flex-direction: column;
 				}
 				.flex.collapse.reverse {
 					flex-direction: column-reverse;
 				}
-				
 				.responsive-margin {
 					margin: 0 !important;
 				}
-				
 				main {
 					padding: 0 1em;
+				}
+			}
+			
+			@media only screen and (max-width:600px) {
+				body {
+					font-size: 12pt;
 				}
 			}
 		`}</style>

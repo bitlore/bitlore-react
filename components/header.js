@@ -1,70 +1,90 @@
-import Link from 'next/link';
+import NavLink from './nav-link';
 
-const Header = () => (
-  <nav>
-    <div>
-      <Link href="/">
-        <a>bit lore</a>
-      </Link>
-    </div>
-    <div>
-      <Link href="/about">
-        <a>about</a>
-      </Link>
-    </div>
-    <div>
-      <Link href="/work">
-        <a>work</a>
-      </Link>
-    </div>
-    <div>
-      <Link href="/contact">
-        <a>contact</a>
-      </Link>
-    </div>
-    <style jsx>{`
-      nav {
-      	display: flex;
-      	justify-content: space-between;
-      	margin: 0 auto;
-      	height: 2em;
-      	line-height: 2em;
-      }
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-      nav div {
-      	flex: 1;
-      	position: relative;
-      	padding: .5em 0 0 0;
-      	user-select: none;
-      }
+  render() {
+    return (
+      <nav>
+        <NavLink activeClassName="on" href="/">
+          <div>
+            <a>bit lore</a>
+          </div>
+        </NavLink>
+        <NavLink activeClassName="on" href="/about">
+          <div>
+            <a>about</a>
+          </div>
+        </NavLink>
+        <NavLink activeClassName="on" href="/work">
+          <div>
+            <a>work</a>
+          </div>
+        </NavLink>
+        <NavLink activeClassName="on" href="/contact">
+          <div>
+            <a>contact</a>
+          </div>
+        </NavLink>
+        <style jsx>{`
+          nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            height: 2em;
+            line-height: 2em;
+          }
+          
+          @media only screen and (max-width:600px) {
+            nav {
+              text-align: center;
+            }
+          }
+          
+          a {
+            text-decoration: none;
+            display: inline-block;
+            width: 80%;
+          }
+          div {
+            flex: 1;
+            position: relative;
+            padding: .5em 0 0 0;
+            user-select: none;
+          }
+          div:not(.on) {
+            cursor: pointer;
+          }
+          div::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1.5em;
+            border-bottom: 1px solid #444;
+            transition: width .3s ease, border-color .3s;
+          }
+          div:hover::before {
+            width: 80%;
+          }
+          div.on::before {
+            width: 80%;
+            border-bottom-color: whitesmoke;
+          }
 
-      nav > div:not(.on) {
-      	cursor: pointer;
-      }
-
-      nav > div::before {
-      	content: '';
-      	position: absolute;
-      	width: 0;
-      	height: 1.5em;
-      	border-bottom: 1px solid #444;
-      	transition: width .3s ease, border-color .3s;
-      }
-
-      nav > div:hover::before {
-      	width: 80%;
-      }
-
-      nav > div.on::before {
-      	width: 80%;
-      	border-bottom-color: whitesmoke;
-      }
-      
-      a {
-        text-decoration: none;
-      }
-    `}</style>
-  </nav>
-);
+          @media only screen and (max-width:600px) {
+            div:first-child {
+              text-align: left;
+            }
+            div:last-child {
+              text-align: right;
+            }
+          }
+        `}</style>
+      </nav>
+    );
+  }  
+}
 
 export default Header;
