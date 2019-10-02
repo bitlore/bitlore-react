@@ -1,6 +1,37 @@
 import Layout from '../components/layout';
 
-export default function Work() {
+const projects = ['omi','evans','bm','galileo'];
+let navigating = false;
+let currentProject = 'omi';
+
+function nextProject() {
+  if (navigating) {
+    return;
+  }
+  let currentIndex = projects.indexOf(currentProject);
+  navigating = true;
+  for (let i = 0, n = projects.length; i < n; i++) {
+    let el = document.getElementById(projects[i]);
+    if (i === currentIndex) {
+      el.classList.remove('current');
+      el.classList.add('prev');
+    }
+    else if (
+      i === currentIndex + 1 ||
+      ( currentIndex === projects.length - 1 && i === 0)
+    ) {
+      el.classList.add('current');
+      currentProject = projects[i];
+    }
+    else {
+      el.classList.remove('prev');
+    }
+  }
+  setTimeout( () => { navigating = false; }, 500);
+}
+
+function Work() {
+  
   return (
     <div>
   		<main id="work">
@@ -91,7 +122,7 @@ export default function Work() {
   			</section>
   			
   		</main>
-  		<div className="r-arrow go-right">
+  		<div className="r-arrow go-right" onClick={nextProject}>
   			<div className="go-right"></div>
   		</div>
   		<style jsx>{`
@@ -210,3 +241,5 @@ export default function Work() {
     </div>
   );
 }
+
+export default Work;

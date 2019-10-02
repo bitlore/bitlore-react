@@ -1,28 +1,26 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import { PageTransition } from 'next-page-transitions'
 import Layout from '../components/layout'
 
 
 class MyApp extends App {
 	
-	// static async getInitialProps({ Component, router, ctx }) {
-	// 	let pageProps = {};
-	// 	if (Component.getInitialProps) {
-	// 		pageProps = await Component.getInitialProps(ctx);
-	// 	}
-	// 	return { pageProps, router };
-	// }
+	static async getInitialProps({ Component, ctx }) {
+		let pageProps = {};
+		if (Component.getInitialProps) {
+			pageProps = await Component.getInitialProps(ctx);
+		}
+		return { pageProps };
+	}
 	
 	render() {
 		const { Component, pageProps, router } = this.props;
 		return (
-			<Container>
-				<Layout>
-					<PageTransition timeout={500} classNames="page-transition">
-						<Component {...pageProps} key={router.route} />
-					</PageTransition>
-				</Layout>
+			<Layout>
+				<PageTransition timeout={500} classNames="page-transition">
+					<Component {...pageProps} key={router.route} />
+				</PageTransition>
 				<style jsx global>{`
 					.page-transition-enter {
 						opacity: 0;
@@ -38,8 +36,8 @@ class MyApp extends App {
 						opacity: 0;
 						transition: opacity 500ms;
 					}
-				`}</style>
-			</Container>
+					`}</style>
+			</Layout>
 		)
 	}
 }
