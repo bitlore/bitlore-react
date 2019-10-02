@@ -5789,7 +5789,9 @@ function withRouter(ComposedComponent) {
   WithRouteWrapper.contextTypes = {
     router: _propTypes["default"].object
   };
-  WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps;
+  WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
+  ;
+  WithRouteWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
 
   if (true) {
     var name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
@@ -6595,7 +6597,8 @@ function () {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
       _regeneratorRuntime.mark(function _callee2(Component, ctx) {
-        var cancelled, cancel, App, props, status, url, AppTree, err;
+        var cancelled, cancel, App, props, status, _url_1$parse4, pathname, AppTree, err;
+
         return _regeneratorRuntime.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -6615,31 +6618,19 @@ function () {
                   break;
                 }
 
-                url = ctx.asPath ? ctx.asPath : url_1.format({
-                  pathname: ctx.pathname,
-                  query: ctx.query
-                });
+                _url_1$parse4 = url_1.parse(ctx.asPath || ctx.pathname), pathname = _url_1$parse4.pathname;
                 _context2.next = 8;
-                return fetch(url, {
-                  headers: {
-                    'content-type': 'application/json'
-                  }
-                }).then(function (res) {
+                return fetch("/_next/data".concat(pathname, ".json")).then(function (res) {
                   if (!res.ok) {
                     status = res.status;
                     throw new Error('failed to load prerender data');
                   }
 
                   return res.json();
-                }).then(function (pageProps) {
-                  return {
-                    pageProps: pageProps
-                  };
                 })["catch"](function (err) {
-                  return {
-                    error: err.message,
-                    status: status
-                  };
+                  console.error("Failed to load data", status, err);
+                  window.location.href = pathname;
+                  return new _Promise(function () {});
                 });
 
               case 8:
@@ -7553,12 +7544,12 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_6b5a3ee2368b61971f52 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_6b5a3ee2368b61971f52 */ "dll-reference dll_6b5a3ee2368b61971f52"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -8226,12 +8217,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_6b5a3ee2368b61971f52 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_6b5a3ee2368b61971f52 */ "dll-reference dll_6b5a3ee2368b61971f52"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -8866,12 +8857,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_6b5a3ee2368b61971f52 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_6b5a3ee2368b61971f52 */ "dll-reference dll_6b5a3ee2368b61971f52"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -9342,12 +9333,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_6b5a3ee2368b61971f52 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_6b5a3ee2368b61971f52 */ "dll-reference dll_6b5a3ee2368b61971f52"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -11693,45 +11684,39 @@ var _jsxFileName = "/Users/ethanlaw/Desktop/bitlore-react/pages/contact.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function Contact() {
-  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return __jsx("main", {
+    id: "contact",
+    className: "jsx-3627989446",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, __jsx("main", {
-    id: "contact",
-    className: "jsx-3638113733",
+  }, __jsx("h2", {
+    className: "jsx-3627989446",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, __jsx("h2", {
-    className: "jsx-3638113733",
+  }, __jsx("a", {
+    href: "mailto:hello@bitlore.io",
+    id: "company-email",
+    className: "jsx-3627989446" + " " + "fancy",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, __jsx("a", {
-    href: "mailto:hello@bitlore.io",
-    id: "company-email",
-    className: "jsx-3638113733" + " " + "fancy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
+  }, "hello@bitlore.io")), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "3627989446",
     __self: this
-  }, "hello@bitlore.io"))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "3638113733",
-    __self: this
-  }, "h2.jsx-3638113733{width:18em;text-align:center;white-space:nowrap;margin:0 auto;-webkit-text-decoration:none;text-decoration:none;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9ldGhhbmxhdy9EZXNrdG9wL2JpdGxvcmUtcmVhY3QvcGFnZXMvY29udGFjdC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVZSxBQUdpQixXQUNNLGtCQUNDLG1CQUNMLGNBQ1Esa0RBQ3RCIiwiZmlsZSI6Ii9Vc2Vycy9ldGhhbmxhdy9EZXNrdG9wL2JpdGxvcmUtcmVhY3QvcGFnZXMvY29udGFjdC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9sYXlvdXQnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDb250YWN0KCkge1xuICByZXR1cm4gKFxuICAgIDxMYXlvdXQ+XG5cdFx0XHQ8bWFpbiBpZD1cImNvbnRhY3RcIj5cblx0XHRcdFx0PGgyPlxuXHRcdFx0XHRcdDxhIGhyZWY9XCJtYWlsdG86aGVsbG9AYml0bG9yZS5pb1wiIGlkPVwiY29tcGFueS1lbWFpbFwiIGNsYXNzTmFtZT1cImZhbmN5XCI+aGVsbG9AYml0bG9yZS5pbzwvYT5cblx0XHRcdFx0PC9oMj5cblx0XHRcdDwvbWFpbj5cblx0XHRcdDxzdHlsZSBqc3g+e2Bcblx0XHRcdFx0aDIge1xuXHRcdFx0XHRcdHdpZHRoOiAxOGVtO1xuXHRcdFx0XHRcdHRleHQtYWxpZ246Y2VudGVyO1xuXHRcdFx0XHRcdHdoaXRlLXNwYWNlOm5vd3JhcDtcblx0XHRcdFx0XHRtYXJnaW46MCBhdXRvO1xuXHRcdFx0XHRcdHRleHQtZGVjb3JhdGlvbjogbm9uZTtcblx0XHRcdFx0fVxuXHRcdFx0YH08L3N0eWxlPlxuICAgIDwvTGF5b3V0PlxuICApO1xufSJdfQ== */\n/*@ sourceURL=/Users/ethanlaw/Desktop/bitlore-react/pages/contact.js */"));
+  }, "h2.jsx-3627989446{width:18em;text-align:center;white-space:nowrap;margin:0 auto;-webkit-text-decoration:none;text-decoration:none;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9ldGhhbmxhdy9EZXNrdG9wL2JpdGxvcmUtcmVhY3QvcGFnZXMvY29udGFjdC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFRa0IsQUFHc0IsV0FDTSxrQkFDQyxtQkFDTCxjQUNRLGtEQUN2QiIsImZpbGUiOiIvVXNlcnMvZXRoYW5sYXcvRGVza3RvcC9iaXRsb3JlLXJlYWN0L3BhZ2VzL2NvbnRhY3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGF5b3V0IGZyb20gJy4uL2NvbXBvbmVudHMvbGF5b3V0JztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQ29udGFjdCgpIHtcbiAgcmV0dXJuIChcblx0XHQ8bWFpbiBpZD1cImNvbnRhY3RcIj5cblx0XHRcdDxoMj5cblx0XHRcdFx0PGEgaHJlZj1cIm1haWx0bzpoZWxsb0BiaXRsb3JlLmlvXCIgaWQ9XCJjb21wYW55LWVtYWlsXCIgY2xhc3NOYW1lPVwiZmFuY3lcIj5oZWxsb0BiaXRsb3JlLmlvPC9hPlxuXHRcdFx0PC9oMj5cbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgaDIge1xuICAgICAgICAgIHdpZHRoOiAxOGVtO1xuICAgICAgICAgIHRleHQtYWxpZ246Y2VudGVyO1xuICAgICAgICAgIHdoaXRlLXNwYWNlOm5vd3JhcDtcbiAgICAgICAgICBtYXJnaW46MCBhdXRvO1xuICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgfVxuICAgICAgYH08L3N0eWxlPlxuXHRcdDwvbWFpbj5cbiAgKTtcbn0iXX0= */\n/*@ sourceURL=/Users/ethanlaw/Desktop/bitlore-react/pages/contact.js */"));
 }
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fethanlaw%2FDesktop%2Fbitlore-react%2Fpages%2Fcontact.js ***!
   \******************************************************************************************************************************************/
@@ -11743,16 +11728,16 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcontac
 
 /***/ }),
 
-/***/ "dll-reference dll_01f9a3fa864a7b7414d8":
+/***/ "dll-reference dll_6b5a3ee2368b61971f52":
 /*!*******************************************!*\
-  !*** external "dll_01f9a3fa864a7b7414d8" ***!
+  !*** external "dll_6b5a3ee2368b61971f52" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_01f9a3fa864a7b7414d8;
+module.exports = dll_6b5a3ee2368b61971f52;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact.js.map
