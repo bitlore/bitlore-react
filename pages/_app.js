@@ -6,14 +6,6 @@ import Layout from '../components/layout'
 
 class MyApp extends App {
 	
-	static async getInitialProps({ Component, ctx }) {
-		let pageProps = {};
-		if (Component.getInitialProps) {
-			pageProps = await Component.getInitialProps(ctx);
-		}
-		return { pageProps };
-	}
-	
 	render() {
 		const { Component, pageProps, router } = this.props;
 		return (
@@ -36,7 +28,7 @@ class MyApp extends App {
 						opacity: 0;
 						transition: opacity 500ms;
 					}
-					`}</style>
+				`}</style>
 			</Layout>
 		)
 	}

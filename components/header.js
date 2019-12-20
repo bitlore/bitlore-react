@@ -47,6 +47,7 @@ class Header extends React.Component {
             text-decoration: none;
             display: inline-block;
             width: 80%;
+            white-space: nowrap;
           }
           div {
             flex: 1;

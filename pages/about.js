@@ -31,7 +31,7 @@ export default function About() {
             If you're interested in working with us, <a id="contact-us" className="section-link" href="#">contact us</a> for a complementary consultation.
           </p>
         </div>
-        <img id="beast" className="framed" src="/static/img/beast-redwoods.png" alt="ethan and taylor in the redwoods"></img>
+        <img id="beast" className="framed" src="/static/img/beast-redwoods.jpg" alt="ethan and taylor in the redwoods"></img>
       </section>
       <h2>Our team</h2>
       <div className="flex collapse">
@@ -105,10 +105,10 @@ export default function About() {
           }
           
           main #profile-1 {
-            background-image: url('./img/tay-melon.png');
+            background-image: url('/static/img/tay-melon.png');
           }
           main #profile-2 {
-            background-image: url('./img/ethan-coast.png');
+            background-image: url('/static/img/ethan-coast.png');
           }
         }
         

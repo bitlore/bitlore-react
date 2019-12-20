@@ -1,24 +1,21 @@
+import Head from 'next/head';
 import Header from './header';
 import Backdrop from './backdrop';
+import Container from './container';
+
 
 
 const Layout = props => (
   <div>
+    <Head>
+      <title>bit lore | web development studio</title>
+      <link rel="icon" type="image/png" href="/static/img/favicon.png"></link>
+    </Head>
 		<Backdrop></Backdrop>
-		<div className="container">
+		<Container>
 			<Header />
 			{props.children}
-		</div>
-		<style jsx>{`
-			div.container {
-				position: relative;
-				width: 100%;
-				max-width: 80em;
-				margin: 0 auto;
-				padding: 0 4em;
-				box-sizing: border-box;
-			}
-		`}</style>
+		</Container>
 		<style jsx global>{`
 			body {
 				font-size: 14pt;
@@ -138,9 +135,6 @@ const Layout = props => (
 				}
 				.responsive-margin {
 					margin: 0 !important;
-				}
-				main {
-					padding: 0 1em;
 				}
 			}
 			
