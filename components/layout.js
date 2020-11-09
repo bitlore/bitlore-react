@@ -33,6 +33,13 @@ const Layout = props => (
 			body * {
 				box-sizing: border-box;
 			}
+            body * {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            body *::-webkit-scrollbar {
+                display: none;
+            }
 
 			h1, h2, h3, h4, h5, h6, p, li {
 				font-weight: normal;
