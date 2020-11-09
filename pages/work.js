@@ -6,12 +6,38 @@ let navigating = false;
 
 const projects = [
   {
+    title : 'theheights',
+    image : '/static/img/theheights_plant.png',
+    logo : '/static/img/theheights_logo.svg',
+    header : 'Website development',
+    deliverables : [ 'Custom Wordpress theme','Order form','Deployment'],
+    partners : [
+        {
+            description: 'design by',
+            title : 'Ian Johnson',
+            link : 'https://ianj.myportfolio.com/'
+        },
+        {
+            description: 'photography by',
+            title : 'Wunderfurn Photography',
+            link : 'https://wunderfurn.com/'
+        }
+    ],
+    link : 'https://theheightsco.com'
+  },
+  {
     title : 'omi',
     image : '/static/img/rough-diamond.jpg',
     logo : '/static/img/omi-gold-logo.png',
     header : 'Landing page',
     deliverables : [ 'Layout design','Iconography','Image optimization','Extend Shopify CMS functionality'],
-    partner : { title : 'Surface SEO', link : 'https://surfaceseo.net/' },
+    partners : [
+        {
+            description: 'partnered with',
+            title : 'Surface SEO',
+            link : 'https://surfaceseo.net/'
+        }
+    ],
     link : 'https://www.omigold.com/pages/about-lab-created-diamonds'
   },
   {
@@ -20,7 +46,13 @@ const projects = [
     logo : '/static/img/evans-components-logo.png',
     header : 'Website Development',
     deliverables : ['Developed responsive custom Wordpress theme','Integrated with Mapbox Studio for distribution map','Implemented advanced product filtering'],
-    partner : { title: 'R\\West', link: 'https://www.rwest.com/' },
+    partners : [
+        {
+            description: 'partnered with',
+            title: 'R\\West',
+            link: 'https://www.rwest.com/'
+        }
+    ],
     link : 'https://www.evanscomponents.com/'
   },
   {
@@ -29,18 +61,15 @@ const projects = [
     logo : '/static/img/b-m-lockup.png',
     header : 'E-commerce integration',
     deliverables : ['Built out Shopify ecommerce site to match website','Developed email campaigns through Mailchimp','Led website maintenance and updates'],
-    partner : { title: 'R\\West', link: 'https://www.rwest.com/' },
+    partners : [
+        {
+            description: 'partnered with',
+            title: 'R\\West',
+            link: 'https://www.rwest.com/'
+        }
+    ],
     link : 'https://shop.bonnemaman.us/'
-  },
-  {
-    title : 'galileo',
-    image : '/static/img/galileo-sign.png',
-    logo : '/static/img/galileo-logo.png',
-    header : 'Website development',
-    deliverables : ['Co-built custom responsive Wordpress theme','Collaborated in design concepting','Wrote code for SVG animations'],
-    partner : { title: 'R\\West', link: 'https://www.rwest.com/' },
-    link : 'https://galileo-camps.com/'
-  },
+  }
 ];
 
 let currentProject = projects[0];

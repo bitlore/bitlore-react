@@ -15,15 +15,19 @@ class Project extends React.Component {
 						<img src={this.props.project.logo}></img>
 						<h3>{this.props.project.header}</h3>
 						<ul>	
-							{						
+							{
 								this.props.project.deliverables.map( item => {
 									return <li key={item}>{item}</li>;
 								})
-							}		
+							}
 						</ul>
-						<p>
-							partnered with <a href={this.props.project.partner.link} target="_blank">{this.props.project.partner.title}</a>
-						</p>
+						<ul>
+							{
+								this.props.project.partners.map( (partner, index) => {
+									return <li key={index}>{partner.description} <a href={partner.link} target="_blank">{partner.title}</a></li>;
+								})
+							}
+						</ul>
 						<a href={this.props.project.link} target="_blank">
 							visit page
 						</a>
