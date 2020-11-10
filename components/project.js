@@ -41,7 +41,7 @@ class Project extends React.Component {
 						left: 0;
 						bottom: 0;
 						margin: 0 auto;
-						padding: 6em;
+						padding: 6em 1em 6em 0;
 						transform: translateX(200%);
 						transition: transform 1s;
 						opacity: 0;
@@ -68,17 +68,12 @@ class Project extends React.Component {
 					}
 					section > div.right img {
 						display: block;
-						margin: 4em auto;
-						width: 60%;
+						margin: 2em 0;
+						width: 50%;
 						max-width: 350px;
 					}
-					
-					#galileo div.left {
-						background-size: contain;
-						border: none;
-					}
-					#galileo img {
-						width: 40%;
+					#theheights img {
+						width: 35%;
 					}
 					
 					@media only screen and (max-width: 1000px) {
@@ -92,6 +87,9 @@ class Project extends React.Component {
 						}
 						section > div.left {
 							display: none;
+						}
+						#theheights img {
+							width: 28%;
 						}
 					}
 				`}</style>
