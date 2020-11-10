@@ -60,7 +60,7 @@ const projects = [
     image : '/static/img/jelly-2.png',
     logo : '/static/img/b-m-lockup.png',
     header : 'E-commerce integration',
-    deliverables : ['Build Shopify ecommerce site to match website','Develop email campaigns through Mailchimp'],
+    deliverables : ['Build Shopify ecommerce site to match website look and feel','Develop email campaigns through Mailchimp'],
     partners : [
         {
             description: 'partnered with',
@@ -159,10 +159,8 @@ function Work() {
   					top: auto;
   					bottom: 1.5em;
   					right: 2.5em;
-                    border-color: springgreen springgreen springgreen transparent;
   				}
                 div.r-arrow:first-child {
-                    border-color: transparent transparent transparent springgreen;
                 }
   			}
   		`}</style>

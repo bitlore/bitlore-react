@@ -8,7 +8,7 @@ class Project extends React.Component {
 		return (
 			<section id={this.props.project.title} className={`
 				${this.props.current === this.props.project ? 'current' : ''}
-				flex collapse reverse`}>
+				flex collapse`}>
 				<div className="left framed" style={style}></div>
 				<div className="right flex column">
 					<div>
@@ -78,7 +78,7 @@ class Project extends React.Component {
 					
 					@media only screen and (max-width: 1000px) {
 						section {
-							padding: 1em;
+							padding: 1em 0;
 							max-width: 30em;
 							margin: 0 auto;
 							bottom: auto;
@@ -91,7 +91,7 @@ class Project extends React.Component {
 							margin: 2em auto;
 						}
 						section > div.left {
-							display: none;
+							flex: 0 0 80vw;
 						}
 						#theheights img {
 							width: 28%;

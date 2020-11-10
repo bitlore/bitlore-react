@@ -33,14 +33,7 @@ class Header extends React.Component {
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            height: 2em;
             line-height: 2em;
-          }
-          
-          @media only screen and (max-width:600px) {
-            nav {
-              text-align: center;
-            }
           }
           
           a {
@@ -52,7 +45,7 @@ class Header extends React.Component {
           div {
             flex: 1;
             position: relative;
-            padding: .5em 0 0 0;
+            padding: 0.5em 0 0 0;
             user-select: none;
           }
           div:not(.on) {
@@ -75,11 +68,14 @@ class Header extends React.Component {
           }
 
           @media only screen and (max-width:600px) {
+            nav {
+                text-align: center;
+            }
             div:first-child {
-              text-align: left;
+                text-align: left;
             }
             div:last-child {
-              text-align: right;
+                text-align: right;
             }
           }
         `}</style>
