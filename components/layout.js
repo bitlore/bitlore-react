@@ -30,14 +30,12 @@ const Layout = props => (
 				background-color: #202020;
 			}
 
-			body * {
+			body, body * {
 				box-sizing: border-box;
-			}
-            body * {
                 -ms-overflow-style: none;
                 scrollbar-width: none;
-            }
-            body *::-webkit-scrollbar {
+			}
+            body::-webkit-scrollbar, body *::-webkit-scrollbar {
                 display: none;
             }
 

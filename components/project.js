@@ -79,11 +79,16 @@ class Project extends React.Component {
 					@media only screen and (max-width: 1000px) {
 						section {
 							padding: 1em;
-							max-width: 40em;
+							max-width: 30em;
+							margin: 0 auto;
+							bottom: auto;
 						}
 						section > div.right {
 							display: block;
 							padding-left: 0;
+						}
+						section > div.right img {
+							margin: 2em auto;
 						}
 						section > div.left {
 							display: none;

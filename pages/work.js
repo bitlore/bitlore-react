@@ -10,7 +10,7 @@ const projects = [
     image : '/static/img/theheights_plant.png',
     logo : '/static/img/theheights_logo.svg',
     header : 'Website development',
-    deliverables : [ 'Custom Wordpress theme','Order form','Deployment'],
+    deliverables : [ 'Develop custom Wordpress theme','Create dynamic order form','Deploy site'],
     partners : [
         {
             description: 'design by',
@@ -30,7 +30,7 @@ const projects = [
     image : '/static/img/rough-diamond.jpg',
     logo : '/static/img/omi-gold-logo.png',
     header : 'Landing page',
-    deliverables : [ 'Layout design','Iconography','Image optimization','Extend Shopify CMS functionality'],
+    deliverables : ['Extend Shopify CMS functionality','Design layout','Create custom iconography'],
     partners : [
         {
             description: 'partnered with',
@@ -45,7 +45,7 @@ const projects = [
     image : '/static/img/presslok.png',
     logo : '/static/img/evans-components-logo.png',
     header : 'Website Development',
-    deliverables : ['Developed responsive custom Wordpress theme','Integrated with Mapbox Studio for distribution map','Implemented advanced product filtering'],
+    deliverables : ['Develop custom Wordpress theme','Integrate with Mapbox Studio for distribution map','Implement advanced product filtering'],
     partners : [
         {
             description: 'partnered with',
@@ -60,7 +60,7 @@ const projects = [
     image : '/static/img/jelly-2.png',
     logo : '/static/img/b-m-lockup.png',
     header : 'E-commerce integration',
-    deliverables : ['Built out Shopify ecommerce site to match website','Developed email campaigns through Mailchimp','Led website maintenance and updates'],
+    deliverables : ['Build Shopify ecommerce site to match website','Develop email campaigns through Mailchimp'],
     partners : [
         {
             description: 'partnered with',
@@ -159,7 +159,11 @@ function Work() {
   					top: auto;
   					bottom: 1.5em;
   					right: 2.5em;
+                    border-color: springgreen springgreen springgreen transparent;
   				}
+                div.r-arrow:first-child {
+                    border-color: transparent transparent transparent springgreen;
+                }
   			}
   		`}</style>
     </div>
