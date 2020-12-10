@@ -151,7 +151,7 @@ function Work() {
   				border-color: transparent transparent transparent #444;
   			}
   			
-  			@media only screen and (max-width: 1000px) {
+  			@media only screen and (max-width: 800px) {
   				main {
   					bottom: auto;
   				}

@@ -76,7 +76,7 @@ class Project extends React.Component {
 						width: 35%;
 					}
 					
-					@media only screen and (max-width: 1000px) {
+					@media only screen and (max-width: 800px) {
 						section {
 							padding: 1em 0;
 							max-width: 30em;

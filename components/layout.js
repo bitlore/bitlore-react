@@ -131,7 +131,7 @@ const Layout = props => (
 				margin-bottom: 0;
 			}
 			
-			@media only screen and (max-width: 1000px) {
+			@media only screen and (max-width: 800px) {
 				.flex.collapse {
 					flex-direction: column;
 				}
@@ -140,6 +140,12 @@ const Layout = props => (
 				}
 				.responsive-margin {
 					margin: 0 !important;
+				}
+			}
+            
+            @media only screen and (min-width:800px) and (max-width:1000px) {
+				body {
+					font-size: 12pt;
 				}
 			}
 			

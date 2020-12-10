@@ -95,7 +95,7 @@ export default function About() {
           background-image: url('/static/img/tay-melon.png');
         }
         
-        @media only screen and (max-width:1000px) {
+        @media only screen and (max-width:800px) {
           main section, main#about section > * {
             margin-right: 0 !important;
           }
