@@ -6,6 +6,15 @@ let navigating = false;
 
 const projects = [
   {
+    title : 'kaligrey',
+    image : '/static/img/kaligrey.png',
+    logo : '/static/img/kaligrey_logo.png',
+    header : 'Website development',
+    deliverables : ['Full Wordpress build on existing theme','Hosting management','Google Analytics integration'],
+    partners : [],
+    link : 'https://kaligrey.com/'
+  },
+  {
     title : 'theheights',
     image : '/static/img/theheights_plant.png',
     logo : '/static/img/theheights_logo.svg',
@@ -26,21 +35,6 @@ const projects = [
     link : 'https://theheightsco.com'
   },
   {
-    title : 'omi',
-    image : '/static/img/rough-diamond.jpg',
-    logo : '/static/img/omi-gold-logo.png',
-    header : 'Landing page',
-    deliverables : ['Extend Shopify CMS functionality','Design layout','Create custom iconography'],
-    partners : [
-        {
-            description: 'partnered with',
-            title : 'Surface SEO',
-            link : 'https://surfaceseo.net/'
-        }
-    ],
-    link : 'https://www.omigold.com/pages/about-lab-created-diamonds'
-  },
-  {
     title : 'evans',
     image : '/static/img/presslok.png',
     logo : '/static/img/evans-components-logo.png',
@@ -54,6 +48,21 @@ const projects = [
         }
     ],
     link : 'https://www.evanscomponents.com/'
+  },
+  {
+    title : 'omi',
+    image : '/static/img/rough-diamond.jpg',
+    logo : '/static/img/omi-gold-logo.png',
+    header : 'Landing page',
+    deliverables : ['Extend Shopify CMS functionality','Design layout','Create custom iconography'],
+    partners : [
+        {
+            description: 'partnered with',
+            title : 'Surface SEO',
+            link : 'https://surfaceseo.net/'
+        }
+    ],
+    link : 'https://www.omigold.com/pages/about-lab-created-diamonds'
   },
   {
     title : 'bonnemaman',
