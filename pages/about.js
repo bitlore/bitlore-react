@@ -24,7 +24,7 @@ export default function About() {
             <li>and web animation</li>
           </ul>
           <p>
-            If you're interested in working with us, <a id="contact-us" className="section-link" href="#">contact us</a> for a complementary consultation.
+            If you're interested in working with us, <a id="contact-us" className="section-link" href="/contact">contact us</a> for a complementary consultation.
           </p>
         </div>
         <img id="beast" className="framed" src="/static/img/beast-redwoods.jpg" alt="ethan and taylor in the redwoods"></img>

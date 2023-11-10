@@ -72,7 +72,7 @@ const projects = [
           link: 'https://www.greyghoststudio.com/'
       }
   ],
-    link : 'https://www.providencehealthplan.com/?redirect=0'
+    link : 'https://mgsnowflake.com/en/'
   },
   {
     title : 'theheights',
