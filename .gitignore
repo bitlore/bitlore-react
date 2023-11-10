@@ -1,3 +1,4 @@
 .next/
+.now/
 .git/
 node_modules
