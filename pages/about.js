@@ -16,17 +16,13 @@ export default function About() {
           </p>
           <ul>
             <li>Our services include:</li>
-            <li>web development</li>
-            <li>user interface design</li>
+            <li>front end web development</li>
             <li>user experience</li>
-            <li>branding</li>
+            <li>cms theming and customization</li>
             <li>e-commerce integration</li>
             <li>email marketing</li>
             <li>and web animation</li>
           </ul>
-          <p>
-            Our expert friends at <a href="https://surfaceseo.net/" target="_blank">Surface SEO</a> and <a href="https://www.wunderfurn.com/" target="_blank">Wunderfurn Photography</a> help us increase visibility and provide beautiful imagery.
-          </p>
           <p>
             If you're interested in working with us, <a id="contact-us" className="section-link" href="#">contact us</a> for a complementary consultation.
           </p>
@@ -39,7 +35,7 @@ export default function About() {
           <div>
             <h3>Taylor Pokoj Law</h3>
             <h4>high priestess of the ministry of sinistry</h4>
-            <h4>co-founder // ux // developer</h4>
+            <h4>co-founder // developer</h4>
             <p className="no-bottom-margin">
               <i>Sweet, maybe...passionate, I suppose...but don't ever mistake that for nice.</i>
             </p>
@@ -56,12 +52,12 @@ export default function About() {
           <div>
             <h3>Ethan Law</h3>
             <h4>gourd lord</h4>
-            <h4>co-founder // designer // developer</h4>
+            <h4>co-founder // developer</h4>
             <p>
               <i>There's something that doesn't make sense. Let's go and poke it with a stick.</i>
             </p>
             <p>
-              Ethan's prior experience has been in designing and building the front end of a large scale web application.  He coded the client facing engine for taking online courses, and designed and built the user interface of a new content management system used to create and edit  courses.  He is our lead designer and Javascript expert.
+              Ethan's prior experience has been in designing and building the front end of a large scale web application.  He coded the client facing engine for taking online courses, and designed and built the user interface of a new content management system used to create and edit  courses.  He is our Javascript expert.
             </p>
           </div>
         </section>

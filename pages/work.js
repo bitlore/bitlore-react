@@ -6,13 +6,73 @@ let navigating = false;
 
 const projects = [
   {
+    title : 'holofootwear',
+    image : '/static/img/holo.png',
+    logo : '/static/img/logo-holo-white.svg',
+    header : 'Website development',
+    deliverables : ['Custom wordpress theme development','Shopify e-commerce integration','Webflow design tool collab'],
+    partners : [
+      {
+          description: 'partnered with',
+          title: 'R\\West',
+          link: 'https://www.rwest.com/'
+      }
+  ],
+    link : 'https://holofootwearinc.com/'
+  },
+  {
+    title : 'providencehealthplans',
+    image : '/static/img/providence1.png',
+    logo : '/static/img/logo-providence.svg',
+    header : 'Front end development',
+    deliverables : ['Custom Sitecore theme frontend development','WCAG AA accessibility compliance'],
+    partners : [
+      {
+          description: 'partnered with',
+          title: 'Grey Ghost Studio',
+          link: 'https://www.greyghoststudio.com/'
+      }
+  ],
+    link : 'https://www.providencehealthplan.com/?redirect=0'
+  },
+  {
     title : 'kaligrey',
-    image : '/static/img/kaligrey.png',
+    image : '/static/img/kali.png',
     logo : '/static/img/kaligrey_logo.png',
     header : 'Website development',
     deliverables : ['Full Wordpress build on existing theme','Hosting management','Google Analytics integration'],
     partners : [],
     link : 'https://kaligrey.com/'
+  },
+  {
+    title : 'evans',
+    image : '/static/img/presslok.png',
+    logo : '/static/img/evans-components-logo.png',
+    header : 'Website Development',
+    deliverables : ['Develop custom Wordpress theme','Integrate with Mapbox Studio for distribution map','Implement advanced product filtering'],
+    partners : [
+        {
+            description: 'partnered with',
+            title: 'R\\West',
+            link: 'https://www.rwest.com/'
+        }
+    ],
+    link : 'https://www.evanscomponents.com/'
+  },
+  {
+    title : 'alexion',
+    image : '/static/img/alexion.png',
+    logo : '/static/img/alexion-logo.png',
+    header : 'Front end development',
+    deliverables : ['Front end Sitecore development', 'Custom JS quiz interface and interaction'],
+    partners : [
+      {
+          description: 'partnered with',
+          title: 'Grey Ghost Studio',
+          link: 'https://www.greyghoststudio.com/'
+      }
+  ],
+    link : 'https://www.providencehealthplan.com/?redirect=0'
   },
   {
     title : 'theheights',
@@ -33,51 +93,6 @@ const projects = [
         }
     ],
     link : 'https://theheightsco.com'
-  },
-  {
-    title : 'evans',
-    image : '/static/img/presslok.png',
-    logo : '/static/img/evans-components-logo.png',
-    header : 'Website Development',
-    deliverables : ['Develop custom Wordpress theme','Integrate with Mapbox Studio for distribution map','Implement advanced product filtering'],
-    partners : [
-        {
-            description: 'partnered with',
-            title: 'R\\West',
-            link: 'https://www.rwest.com/'
-        }
-    ],
-    link : 'https://www.evanscomponents.com/'
-  },
-  {
-    title : 'omi',
-    image : '/static/img/rough-diamond.jpg',
-    logo : '/static/img/omi-gold-logo.png',
-    header : 'Landing page',
-    deliverables : ['Extend Shopify CMS functionality','Design layout','Create custom iconography'],
-    partners : [
-        {
-            description: 'partnered with',
-            title : 'Surface SEO',
-            link : 'https://surfaceseo.net/'
-        }
-    ],
-    link : 'https://www.omigold.com/pages/about-lab-created-diamonds'
-  },
-  {
-    title : 'bonnemaman',
-    image : '/static/img/jelly-2.png',
-    logo : '/static/img/b-m-lockup.png',
-    header : 'E-commerce integration',
-    deliverables : ['Build Shopify ecommerce site to match website look and feel','Develop email campaigns through Mailchimp'],
-    partners : [
-        {
-            description: 'partnered with',
-            title: 'R\\West',
-            link: 'https://www.rwest.com/'
-        }
-    ],
-    link : 'https://shop.bonnemaman.us/'
   }
 ];
 
