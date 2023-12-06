@@ -1,7 +1,8 @@
-import Head from 'next/head';
-import Header from './header';
-import Backdrop from './backdrop';
-import Container from './container';
+import * as React from 'react'
+import Head from 'next/head'
+import Header from './header'
+import Backdrop from './backdrop'
+import Container from './container'
 
 
 
@@ -85,6 +86,10 @@ const Layout = props => (
 				position: relative;
 				color: whitesmoke;
 			}
+			nav a { 
+				text-decoration: none; 
+				width: 25%;
+			}
 			a.fancy {
 				text-decoration: none;
 			}
@@ -152,6 +157,13 @@ const Layout = props => (
 			@media only screen and (max-width:600px) {
 				body {
 					font-size: 12pt;
+				}
+				nav a { width: auto; }
+				nav a:first-child {
+					text-align: left;
+				}
+				nav a:last-child {
+					text-align: right;
 				}
 			}
 		`}</style>

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import App from 'next/app'
 import { PageTransition } from 'next-page-transitions'
 import Layout from '../components/layout'

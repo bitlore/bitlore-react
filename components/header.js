@@ -1,4 +1,5 @@
-import NavLink from './nav-link';
+import * as React from 'react'
+import NavLink from './nav-link'
 
 class Header extends React.Component {
   constructor(props) {
@@ -10,22 +11,22 @@ class Header extends React.Component {
       <nav>
         <NavLink activeClassName="on" href="/">
           <div>
-            <a>bit lore</a>
+            <p>bit lore</p>
           </div>
         </NavLink>
         <NavLink activeClassName="on" href="/about">
           <div>
-            <a>about</a>
+            <p>about</p>
           </div>
         </NavLink>
         <NavLink activeClassName="on" href="/work">
           <div>
-            <a>work</a>
+            <p>work</p>
           </div>
         </NavLink>
         <NavLink activeClassName="on" href="/contact">
           <div>
-            <a>contact</a>
+            <p>contact</p>
           </div>
         </NavLink>
         <style jsx>{`
@@ -35,12 +36,9 @@ class Header extends React.Component {
             margin: 0 auto;
             line-height: 2em;
           }
-          
-          a {
-            text-decoration: none;
-            display: inline-block;
-            width: 80%;
-            white-space: nowrap;
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
           }
           div {
             flex: 1;
@@ -71,11 +69,11 @@ class Header extends React.Component {
             nav {
                 text-align: center;
             }
-            div:first-child {
-                text-align: left;
+            div::before {
+              left: 0;
             }
-            div:last-child {
-                text-align: right;
+            div.on::before {
+              width: 100%;
             }
           }
         `}</style>
